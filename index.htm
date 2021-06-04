@@ -12,9 +12,12 @@ background: #99ccff;
 font-size: 80px;
 color: #ff0000;
 cursor: pointer;
+border: 12px solid #444444;
+height: 30%;
 }
 .tabela{	
-background: #000066;
+background: #444444;
+border: 12px solid #444444;
 }
 
 -->
@@ -26,7 +29,7 @@ letra = "X";
 function joga(celula){
     celulaclicada = document.getElementById(celula).innerHTML;
    if (celulaclicada == "X" || celulaclicada == "O"){
-       alert("Opa, este quadrado j� foi escolhido!");
+       alert("Opa, este quadrado já foi escolhido!");
    }else{
         document.getElementById(celula).innerHTML = letra;
         if (letra == "X"){
@@ -48,7 +51,7 @@ function verif(){
    c32 = document.getElementById('cel32').innerHTML;
    c33 = document.getElementById('cel33').innerHTML;
    if (((c11 != '') && (c12 != '') && (c13 != '') && (c11 == c12) && (c12 == c13)) || ((c11 != '') && (c22 != '') && (c33 != '') && (c11 == c22) && (c22 == c33)) || ((c11 != '') && (c21 != '') && (c31 != '') && (c11 == c21) && (c21 == c31)) || ((c21 != '') && (c22 != '') && (c23 != '') && (c21 == c22) && (c22 == c23)) || ((c31 != '') && (c32 != '') && (c33 != '') && (c31 == c32) && (c32 == c33)) || ((c12 != '') && (c22 != '') && (c32 != '') && (c12 == c22) && (c22 == c32)) || ((c13 != '') && (c23 != '') && (c33 != '') && (c13 == c23) && (c23 == c33)) || ((c31 != '') && (c22 != '') && (c13 != '') && (c31 == c22) && (c22 == c13))){
-       alert('Voc� ganhou! Parab�ns campe�o!');
+       alert('Você ganhou! Parabéns campeão!');
       novo();
    }
 }
